@@ -1,0 +1,27 @@
+# praktikum-adp
+repository untuk mengelola pratikum ADP 2024
+
+Nama: NAURAH MAWADDAH
+Nim: 2310431002
+shift: 1 
+
+program perkalian_sederhana;
+uses crt;
+var
+    p,q,hasil:integer;
+begin
+clrscr;
+    writeln('nama = NAURAH MAWADDAH');
+    writeln('nim = 2310431002');
+    writeln('shift = 1');
+    writeln('tugas praktikum adp);
+    writeln('tugas perkalian sederhana');
+    write('p=');
+    readln(p);
+    write('q=');
+    readln(q);
+    hasil := p*q;
+    writeln('hasil perkalian = ',hasil);
+    writeln('maka didapatkan hasil perkalian dari p kali q ialah = ',hasil);
+    readln();
+end.
