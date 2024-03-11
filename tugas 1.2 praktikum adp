@@ -1,0 +1,25 @@
+# praktikum-adp
+repository untuk mengelola pratikum ADP 2024
+
+Nama: NAURAH MAWADDAH
+Nim: 2310431002
+shift: 1 
+
+program menghitung_volume_bola;
+uses crt;
+var
+    r,volume:rael;
+begin
+clrscr;
+    writeln('nama = NAURAH MAWADDAH');
+    writeln('nim = 2310431002');
+    writeln('shift = 1');
+    writeln('tugas praktikum adp);
+    writeln('tugas menghitung volume bola');
+    write('jari jari');
+    readln(r);
+    volume :=4/3*3.14*r*r*r;
+    writeln('volume = ',volume);
+    writeln('maka didapatkan volume bola ialah = ',volume);
+    readln();
+end.
