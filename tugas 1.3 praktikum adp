@@ -1,0 +1,29 @@
+# praktikum-adp
+repository untuk mengelola pratikum ADP 2024
+
+Nama: NAURAH MAWADDAH
+Nim: 2310431002
+shift: 1 
+
+program menghitung_luas_permukaan_balok;
+uses crt;
+var
+    panjang,lebar,tinggi,luas:integer;
+begin
+clrscr;
+    writeln('nama = NAURAH MAWADDAH');
+    writeln('nim = 2310431002');
+    writeln('shift = 1');
+    writeln('tugas praktikum adp);
+    writeln('tugas program menghitung luas permukaan balok');
+    write('panjang=');
+    readln(panjang);
+    write('lebar=');
+    readln(lebar);
+    write('tinggi=');
+    readln(tinggi);
+    luas :=2*((panjang*lebar)+(panjang*tinggi)+(lebar*tinggi));
+    writeln('hasil luas permukaan balok = ',luas);
+    writeln('maka didapatkan luas permukaan balok ialah = ',luas);
+    readln();
+end.
