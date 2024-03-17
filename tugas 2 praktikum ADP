@@ -1,0 +1,129 @@
+uses crt;
+var
+    total,pesanan,makanan,minuman,paketan,item,harga,total_harga:integer;
+Begin
+          clrscr;
+          writeln('Nama = Naurah Mawaddah');
+          writeln('Nim = 2310431002');
+          writeln('shift = 1');
+          writeln('tugas praktikum adp ke-2');
+          writeln();
+          writeln('selamat datang di resto happy');
+         writeln('silahkan pilih pesanan anda');
+         writeln();
+         writeln('1. makanan');
+         writeln('2.minuman');
+         writeln('3. makanan dan minuman');
+         writeln();
+         writeln('input pesanan= ');
+         readln(pesanan);
+         
+         if(pesanan=1) then begin  writeln('makanan');
+          
+          writeln('daftar menu makanan');
+          writeln();
+          writeln('daftar makanan');
+          writeln();
+          writeln('1. nasi goreng special');
+          writeln('2.burger');
+          writeln('3. mie goreng');
+          writeln('input makanan= ');
+          readln(makanan);
+          
+          if(makanan = 1) then begin writeln('nasi goreng special');
+          writeln('banyak item = ');
+          readln(item);
+          harga := 15000;
+          total_harga := item*harga;
+          writeln('total harga = ', total_harga);
+          end;
+          if(makanan = 2) then begin writeln('burger');
+          writeln('banyak item = ');
+          readln(item);
+          harga := 20000;
+          total_harga := item*harga;
+          writeln('total harga = ',total_harga);
+          end;
+          if(makanan = 3) then begin writeln('mie goreng');
+          writeln('banyak item = ');
+          readln(item);
+          harga := 13000;
+          total_harga := item*harga;
+          writeln('total harga = ',total_harga);
+          end;
+          end;
+          
+          if(pesanan = 2) then begin writeln('minuman');
+          
+          writeln('daftar menu minuman');
+          writeln();
+          writeln('menu minuman');
+          writeln();
+          writeln('1. Ice Tea');
+          writeln('2. greetea');
+          writeln('3. ice coklat');
+          writeln('input minuman= ');
+          readln(minuman);
+          
+          if(minuman = 1) then begin writeln('ice tea');
+          writeln('banyak item = ');
+          readln(item);
+          harga := 10000
+           ; total_harga := item*harga;
+          writeln('total harga = ', total_harga);
+          end;
+          if(minuman = 2) then begin writeln('greentea');
+          writeln('banyak item = ');
+          readln(item);
+          harga := 13000;
+          total_harga := item*harga;
+          writeln('total harga = ', total_harga);
+          end;
+          if(minuman = 3) then begin writeln('ice coklat');
+          writeln('banyak item = ');
+          readln(item);
+          harga := 15000;
+          total_harga := item*harga;
+          writeln('total harga = ', total_harga);  
+          end;
+          end;
+          
+            if (pesanan= 3) then begin writeln('paketan');
+          
+          writeln('daftar menu paketan');
+          writeln();
+          writeln('menu paketan');
+          writeln();
+          writeln('1. nasi goreng special + ice tea');
+          writeln('2.burger + greentea');
+          writeln('3. mie goreng + ice coklat');
+          writeln('input paketan= '); 
+          readln(paketan);
+          
+          if(paketan= 1) then begin writeln('nasi goreng special + ice tea');
+          writeln('banyak item =');
+          readln(item);
+          harga := 19000;
+          total_harga := item*harga;
+          writeln('total harga = ', total_harga);
+          end;
+          if(paketan = 2) then begin writeln('burger + greentea');
+          writeln('banyak item = ');
+          readln(item);
+          harga :=29000;
+          total_harga := item*harga;
+          writeln('total harga = ', total_harga);
+          end;
+          if(paketan= 3) then begin writeln('mie goreng + oce coklat');
+          writeln('banyak item = ');
+          readln(item);
+          harga := 22000;
+          total_harga := item*harga;
+          writeln('total harga = ',harga);
+          end;
+          end;
+
+          if(pesanan=4) then begin writeln('kode pesanan tidak valid');
+          end;
+         readln();
+end .
