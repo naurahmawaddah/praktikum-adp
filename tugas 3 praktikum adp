@@ -1,0 +1,48 @@
+print()
+nama = "NAURAH MAWADDAH"
+nim = "2310431002"
+shift = "1"
+program = "modul 3 perulangan"
+tugas = "tugas praktikum adp"
+print()
+print("nama =", nama)
+print("nim =", nim)
+print("shift =", shift)
+print("program =", program)
+print("tugas =", tugas)
+print()
+n = int(input('masukkan n ='))
+while (1<=n<=10):
+    print("    menu     ")
+    print()
+    print("1.tabel perkalian nXn")
+    print("2. tabel penjumlahan nXn")
+    print("3. keluar")
+    print()
+    menu = int(input("menu:"))
+    if menu==1:
+        n = int(input('masukkan nilai n(1-10)'))
+        print(" tabel perkalian ")
+        for i in range (1, n+1):
+            print(i, end="\t")
+        print()
+        print("\n")
+        for j in range (1, n+1):
+            for k in range (1, n+1):
+                print(j * k, end = "\t")
+            print("\n") 
+    elif menu==2:
+        n = int(input('masukkan nilai n(1-10)'))
+        print(" tabel penjumlahan ")
+        for i in range (n+1):
+            print(i, end="\t")
+        print()
+        print("\n")
+        for j in range (n+1):
+            for k in range (n+1):
+                print(j + k, end = "\t")
+            print("\n") 
+    elif menu==3:
+        break
+    else:
+        print("input ulang menu")
