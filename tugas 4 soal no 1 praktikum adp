@@ -1,0 +1,48 @@
+print()
+nama = "NAURAH MAWADDAH"
+nim = "2310431002"
+shift = "1"
+program = "modul 4 pengkondisian dan perulangan"
+tugas = "tugas praktikum adp"
+print()
+print("nama =", nama)
+print("nim =", nim)
+print("shift =", shift)
+print("program =", program)
+print("tugas =", tugas)
+print()
+def cek_bilangan_sempurna(bilangan):
+    faktor = 0
+    for i in range(1, bilangan):
+        if bilangan % i == 0:
+            faktor += i
+    if faktor == bilangan:
+        return True
+    else:
+        return False
+
+def cek_genap_ganjil(bilangan):
+    if bilangan % 2 == 0:
+        return "Genap"
+    else:
+        return "Ganjil"
+
+def main():
+    try:
+        bilangan = int(input("Masukkan bilangan bulat positif: "))
+        if bilangan <= 0:
+            print("Masukkan harus bilangan bulat positif.")
+            return
+        if cek_bilangan_sempurna(bilangan):
+            print(f"{bilangan} adalah bilangan sempurna.")
+        else:
+            print(f"{bilangan} bukan bilangan sempurna.")
+        
+        jenis = cek_genap_ganjil(bilangan)
+        print(f"{bilangan} adalah bilangan {jenis}.")
+        
+    except ValueError:
+        print("Masukan tidak valid. Harap masukkan bilangan bulat.")
+
+if __name__ == "__main__":
+    main()
