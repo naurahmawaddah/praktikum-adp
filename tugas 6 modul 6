@@ -1,0 +1,37 @@
+print("jadwal penerbangan")
+jadwal_penerbangan = [
+    ["Padang", "Jakarta", "08:00", "09:30"],
+    ["Jakarta", "Ambon", "11:00", "12:30"],
+    ["Jakarta", "istanbul", "13:00", "02:15"],
+    ["pekanbaru", "bali", "18:00", "19:50"],
+]
+print("=======================================================================")
+print("| Kota Asal | Kota Tujuan | Waktu Keberangkatan | Waktu Kedatangan |")
+print("=======================================================================")
+
+for penerbangan in jadwal_penerbangan:
+    print("| {:10} | {:11} | {:20} | {:16} |".format(*penerbangan))
+
+print("=======================================================================")
+
+rute_1 = "padang-jakarta"
+rute_2 = "jakarta-ambon"
+rute_3 = "jakarta-istanbul"
+rute_4 = "pekanbaru-bali"
+rute_p = int(input("nomor rute p: "))
+rute_q = int(input("nomor rute q: "))
+
+if rute_p == 1 and rute_q == 2:
+    print("rute yang tercepat antara ", rute_1, "dan", rute_2, "adalah", rute_1)
+if rute_p == 1 and rute_q == 3:
+    print("rute yang tercepat antara ", rute_1, "dan", rute_3, "adalah", rute_1)
+if rute_p == 1 and rute_q == 4:
+    print("rute yang tercepat antara ", rute_1, "dan", rute_4, "adalah", rute_1)
+if rute_p == 2 and rute_q == 3:
+    print("rute yang tercepat antara ", rute_2, "dan", rute_3, "adalah", rute_2)
+if rute_p == 2 and rute_q == 4:
+    print("rute yang tercepat antara ", rute_2, "dan", rute_3, "adalah", rute_4)
+if rute_p == 3 and rute_q == 4:
+    print("rute yang tercepat antara ", rute_3, "dan", rute_3, "adalah", rute_4)
+
+
