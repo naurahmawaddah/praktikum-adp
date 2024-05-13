@@ -1,0 +1,62 @@
+print("jadwal_harian = []")
+def tambah_kegiatan(jadwal_harian):
+    waktu_mulai = input("Masukkan waktu mulai kegiatan (jam:menit): ")
+    waktu_selesai = input("Masukkan waktu selesai kegiatan (jam:menit): ")
+    deskripsi = input("Masukkan deskripsi kegiatan: ")
+    jadwal_harian.append([waktu_mulai, waktu_selesai, deskripsi])
+    print("Kegiatan berhasil ditambahkan!")
+    return jadwal_harian
+
+def hapus_kegiatan(jadwal_harian):
+    if not jadwal_harian:
+        print("Jadwal harian kosong.")
+    else:
+        print("Jadwal Harian:")
+        print("No. | Waktu Mulai | Waktu Selesai | Deskripsi")
+        for i in range(len(jadwal_harian)):
+            kegiatan = jadwal_harian[i]
+            print(f"{i+1}   | {kegiatan[0]}       | {kegiatan[1]}        | {kegiatan[2]}")
+        
+        i_hapus = int(input("Masukkan nomor kegiatan yang ingin dihapus: ")) - 1
+        if i_hapus < len(jadwal_harian):
+            jadwal_harian_baru = jadwal_harian[:i_hapus] + jadwal_harian[i_hapus+1:]
+            print("Kegiatan berhasil dihapus!")
+            return jadwal_harian_baru
+        else:
+            print("Nomor kegiatan tidak valid.")
+
+    return jadwal_harian
+
+def tampilkan_jadwal(jadwal_harian):
+    if not jadwal_harian:
+        print("Jadwal harian kosong.")
+    else:
+        print("Jadwal Harian:")
+        print("No. | Waktu Mulai | Waktu Selesai | Deskripsi")
+        for i in range(len(jadwal_harian)):
+            kegiatan = jadwal_harian[i]
+            print(f"{i+1}   | {kegiatan[0]}       | {kegiatan[1]}        | {kegiatan[2]}")
+
+    return jadwal_harian
+
+jadwal_harian = []
+
+while True:
+    print("\nMenu:")
+    print("1. Tambah Kegiatan")
+    print("2. Hapus Kegiatan")
+    print("3. Tampilkan Jadwal")
+    print("4. Keluar")
+
+    pilihan = input("Masukkan pilihan (1/2/3/4): ")
+
+    if pilihan == "1":
+        jadwal_harian = tambah_kegiatan(jadwal_harian)
+    elif pilihan == "2":
+        jadwal_harian = hapus_kegiatan(jadwal_harian)
+    elif pilihan == "3":
+        tampilkan_jadwal(jadwal_harian)
+    elif pilihan == "4":
+        break
+    else:
+        print("Pilihan tidak valid. Silakan coba lagi.")
