@@ -1,0 +1,82 @@
+def baca_data():
+    list_data = []
+    with open("data.txt", "r") as file:
+        data = {}
+        for line in file:
+            if line.strip() == "":
+                if data:
+                    list_data.append(data)
+                    data = {}
+            else:
+                key, value = line.strip().split(": ")
+                data[key] = value
+        if data:
+            list_data.append(data)
+    return list_data
+
+def simpan_data(data):
+    with open("data.txt", "a") as file:
+        for key, value in data.items():
+            file.write(f"{key}: {value}\n")
+        file.write("\n")
+    print("Data berhasil disimpan!")
+
+def hapus_data(nama):
+    if nama:
+        list_data = baca_data()
+        with open("data.txt", "w") as file:
+            for data in list_data:
+                if data.get("Nama") != nama:
+                    for key, value in data.items():
+                        file.write(f"{key}: {value}\n")
+                    file.write("\n")
+        print(f"Data dengan nama {nama} berhasil dihapus")
+
+def tampilkan_data():
+    list_data = baca_data()
+    if list_data:
+        print("Data:")
+        for data in list_data:
+            for key, value in data.items():
+                print(f"{key}: {value}")
+            print()
+    else:
+        print("Tidak ada data yang tersedia.")
+
+def main():
+    while True:
+        print("\nMenu:")
+        print("1. Simpan Data")
+        print("2. Hapus Data")
+        print("3. Tampilkan Data")
+        print("4. Keluar")
+
+        pilihan = input("Masukkan pilihan (1/2/3/4): ")
+
+        if pilihan == "1":
+            data = {}
+            data["Nama"] = input("Nama: ")
+            data["Umur"] = input("Umur: ")
+            data["Jenis Kelamin"] = input("Jenis Kelamin: ")
+            data["Golongan Darah"] = input("Golongan Darah: ")
+            data["Riwayat Penyakit"] = input("Riwayat Penyakit: ")
+            data["Daftar Obat"] = input("Daftar Obat: ")
+            simpan_data(data)
+
+        elif pilihan == "2":
+            nama = input("Masukkan nama yang ingin dihapus: ")
+            hapus_data(nama)
+
+        elif pilihan == "3":
+            tampilkan_data()
+
+        elif pilihan == "4":
+            break
+
+        else:
+            print("Pilihan tidak valid. Silakan masukkan pilihan yang benar.")
+
+if _name_ == "_main_":
+    with open("data.txt", "a") as file:
+        pass
+    main()
